@@ -1,0 +1,93 @@
+<html>
+
+  <font face="Arial">
+    <u><h3>Salida</h3></u>
+    <strong>País: </strong>{{formData.f_departure_country}}
+    <br>
+    <strong>Ciudad: </strong>{{formData.f_departure_city}}
+    <br>
+    <strong>Dirección: </strong>{{formData.f_departure_address}}
+    <br>
+    <strong>Piso: </strong>{{formData.f_departure_floor ? formData.f_departure_floor : 'No especificado'}}
+    <br>
+    <strong>Tipo: </strong>{{formData.f_departure_type}}
+    <br>
+    <strong>Fecha estimada de salida (mes/día/año): </strong>{{formData.f_departure_date | date:"MM/dd/yyyy"}}
+
+    <u><h3>Llegada</h3></u>
+    <strong>País: </strong>{{formData.f_destination_country ? formData.f_destination_country : 'No especificado'}}
+    <br>
+    <strong>Ciudad: </strong>{{formData.f_destination_city ? formData.f_destination_city : 'No especificado'}}
+    <br>
+    <strong>Dirección: </strong>{{formData.f_destination_address ? formData.f_destination_address : 'No especificado'}}
+    <br>
+    <strong>Piso: </strong>{{formData.f_destination_floor ? formData.f_destination_floor : 'No especificado'}}
+    <br>
+    <strong>Tipo: </strong>{{formData.f_destination_type ? formData.f_destination_type : 'No especificado'}}
+
+    <u><h3>Servicios solicitados</h3></u>
+
+    - Tipo de servicio:
+      <div ng-switch on="formData.f_service_type">
+          <div class="animate-switch" ng-switch-when="all_inclusive">Todo incluído</div>
+          <div class="animate-switch" ng-switch-when="basic">Servicio básico</div>
+          <div class="animate-switch" ng-switch-when="intermediate">Servicio intermedio</div>
+      </div>
+    <br>
+
+    - Volar muebles: {{formData.f_services_furniture_package ? 'Sí' : 'No'}}
+    <br>
+
+    - Servicio de almacenaje: {{formData.f_services_storage ? 'Sí' : 'No'}}
+    <br>
+
+    - Instalación de pantallas: {{formData.f_services_screen_install ? 'Sí' : 'No'}}
+    <br>
+
+    - Instalación de cuadros: {{formData.f_services_frame_install ? 'Sí' : 'No'}}
+    <br>
+
+    - Traslado de automóvil o motocicleta: {{formData.f_services_car ? 'Sí' : 'No'}}
+    <br>
+    <div ng-if="formData.f_services_car">
+      <blockquote>
+        <font color="gray">
+          <small>Modelo: {{formData.f_services_car_model ? formData.f_services_car_model : 'No especificado'}}</small>
+          <br>
+          <small>Tiene seguro: {{formData.f_services_car_insurance ? 'Sí' : 'No'}}</small>
+          <br>
+          <small>Funciona: {{formData.f_services_car_working ? 'Sí' : 'No'}}</small>
+          <br>
+          <small>Observaciones: {{formData.f_services_car_obs ? formData.f_services_car_obs : 'No especificado'}}</small>
+        </font>
+      </blockquote>
+    </div>
+
+    <u><h3>Forma de Pago</h3></u>
+    <strong>Tipo: </strong>
+      <div ng-switch on="formData.f_payment_type">
+          <div class="animate-switch" ng-switch-when="visa_or_master_card_3_months">Visa/MasterCard 3 meses sin intereses</div>
+          <div class="animate-switch" ng-switch-when="visa_or_master_card_6_months">Visa/MasterCard 6 meses sin intereses</div>
+          <div class="animate-switch" ng-switch-when="amex">AMEX 3 Meses sin intereses</div>
+          <div class="animate-switch" ng-switch-when="cash_or_transfer">Transferencia bancaria/Contado</div>
+      </div>
+    <br>
+    <strong>Requiere factura: </strong>{{formData.f_payment_need_receipt ? 'Sí' : 'No'}}
+
+    <u><h3>Contacto</h3></u>
+    <strong>Nombre: </strong> {{formData.f_contact_name}}
+    <br>
+    <strong>Email: </strong> {{formData.f_contact_email}}
+    <br>
+    <strong>Teléfono: </strong> {{formData.f_contact_phone}}
+    <br>
+    <strong>Celular: </strong> {{formData.f_contact_cellphone}}
+    <br>
+    <strong>Contestar por: </strong>
+    <div ng-switch on="formData.f_contact_type">
+        <div class="animate-switch" ng-switch-when="call">Llamada</div>
+        <div class="animate-switch" ng-switch-when="email">Email</div>
+    </div>
+
+  </font>
+</html>

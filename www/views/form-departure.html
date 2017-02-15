@@ -1,0 +1,70 @@
+<div class="text-center well">
+  Los campos marcados con * son obligatorios.
+</div>
+
+<div class="form-horizontal">
+  <div class="form-group">
+      <label for="f_departure_country" class="col-sm-3 control-label">País *</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_departure_country" ng-model="formData.f_departure_country" required>
+        <p ng-show="mainForm.f_departure_country.$invalid && !mainForm.f_departure_country.$pristine" class="help-block">Este campo es requerido.</p>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_departure_city" class="col-sm-3 control-label">Ciudad *</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_departure_city" ng-model="formData.f_departure_city" required>
+        <p ng-show="mainForm.f_departure_city.$invalid && !mainForm.f_departure_city.$pristine" class="help-block">Este campo es requerido.</p>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_departure_address" class="col-sm-3 control-label">Dirección/C.P. *</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_departure_address" ng-model="formData.f_departure_address" required>
+        <p ng-show="mainForm.f_departure_address.$invalid  && !mainForm.f_departure_address.$pristine" class="help-block">Este campo es requerido.</p>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_departure_floor" class="col-sm-3 control-label">Piso</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_departure_floor" ng-model="formData.f_departure_floor">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_departure_type" class="col-sm-3 control-label">Tipo *</label>
+      <div class=" col-sm-9">
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_departure_type" value="house" name="f_departure_type" id="house" required>
+          <label for="house"><span></span></label> Casa
+        </div>
+        <div class="radio">
+         <input type="radio" ng-model="formData.f_departure_type" value="department" name="f_departure_type" id="department" required>
+         <label for="department"><span></span></label> Departamento
+        </div>
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_departure_type" value="office" name="f_departure_type" id="office" required>
+          <label for="office"><span></span></label> Oficina
+        </div>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_departure_date" class="col-sm-3 control-label">Fecha estimada para cambio *</label>
+      <div class="col-sm-9">
+        <input type="date" class="form-control" name="f_departure_date" ng-model="formData.f_departure_date" required>
+      </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-xs-12">
+        <a ui-sref="form.images" class="btn btn-default btn-next">
+          Siguiente
+        </a>
+    </div>
+  </div>
+</div>

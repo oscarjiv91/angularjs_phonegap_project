@@ -1,0 +1,61 @@
+<div class="text-center well">
+  Si ya tiene fijado un lugar de llegada, complete
+  los siguientes campos. De lo contrario, puede
+  dejarlos en blanco y pulsar “SIGUIENTE”
+</div>
+
+<div class="form-horizontal">
+  <div class="form-group">
+      <label for="f_destination_country" class="col-sm-3 control-label">País</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_destination_country" ng-model="formData.f_destination_country">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_destination_city" class="col-sm-3 control-label">Ciudad</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_destination_city" ng-model="formData.f_destination_city">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_destination_address" class="col-sm-3 control-label">Dirección</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_destination_address" ng-model="formData.f_destination_address">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_destination_floor" class="col-sm-3 control-label">Piso</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="f_destination_floor" ng-model="formData.f_destination_floor">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_destination_type" class="col-sm-3 control-label">Tipo *</label>
+      <div class=" col-sm-9">
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_destination_type" value="house" name="f_destination_type" id="dest_house">
+          <label for="dest_house"><span></span></label> Casa
+        </div>
+        <div class="radio">
+         <input type="radio" ng-model="formData.f_destination_type" value="department" name="f_destination_type" id="dest_department">
+         <label for="dest_department"><span></span></label> Departamento
+        </div>
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_destination_type" value="office" name="f_destination_type" id="dest_office">
+          <label for="dest_office"><span></span></label> Oficina
+        </div>
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-xs-12">
+        <a ui-sref="form.services" class="btn btn-default btn-next">
+          Siguiente
+        </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="text-center well">
+  Adjunte las fotos de todas las habitaciones
+de su casa. Es importante que incluya todos
+los rincones, y los artículos que se
+encuentran en el lugar.
+</div>
+
+
+<div ng-repeat="room in rooms">
+  <p class="image-section">
+    <label>{{room.title}}</label>
+  </p>
+  <div class="images-preview">
+    <div class="row">
+      <div ng-repeat="image in formData.images[room.key]">
+
+        <div class="col-xs-3">
+          <a ng-click="removeImage(image, room.key)"><img src="{{'data:image/jpeg;base64,' + image}}" class="thumbnail"></img></a>
+        </div>
+      </div>
+    </div>
+    <a ng-click="pickImage(room.key)" class="btn btn-default btn-add-images"><img src="./img/ic_camera.png"></a>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-xs-12">
+      <a ui-sref="form.destination" class="btn btn-default btn-next">
+        Siguiente
+      </a>
+  </div>
+</div>

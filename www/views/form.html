@@ -1,0 +1,82 @@
+<!-- Navigation -->
+<div class="main-form">
+  <nav class="navbar navbar-default navbar-fixed-top" style="position:absolute">
+    <div class="container-fluid">
+      <!-- <div class="navbar-header"> -->
+        <div class="row">
+          <div class="col-xs-4">
+            <button ng-click="goBack()" class="btn btn-default navbar-btn" id="btn-back">Cancelar</button>
+          </div>
+          <!-- <div class="col-xs-4">
+            <a href="#" onclick="goBack()" class="btn btn-default navbar-btn" >Atrás</a>
+          </div>
+          <div class="col-xs-4">
+            <a href="#" onclick="goBack()" class="btn btn-default navbar-btn" >Atrás</a>
+          </div> -->
+          <div class="col-xs-4">
+            <div class="text-center nav-title">
+              <div data-ng-bind="$state.current.title">{{$state.current.title}} </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+  </nav>
+
+  <div id="form-container">
+    <div class="form">
+
+      <span id="top"/>
+      <!-- /container -->
+
+      <div class="col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
+        <div class="steps">
+        <!-- <div class="container"> -->
+          <div class="col-xs-12">
+            <div class="progress progress-dots">
+              <a class="progress-start progress-dot" ui-sref=".departure">
+                <span class="progress-label">1</span>
+              </a>
+              <div class="progress-bar {{1 <= position ? 'progress-bar-active' : 'progress-bar-disabled'}}" style="width: 20%">
+                <a class="progress-dot" ui-sref=".images">
+                  <span class="progress-label">2</span>
+                </a>
+                <span class="sr-only">25%</span>
+              </div>
+              <div class="progress-bar {{2 <= position ? 'progress-bar-active' : 'progress-bar-disabled'}}"  style="width: 20%">
+                <a class="progress-dot" ui-sref=".destination">
+                  <span class="progress-label">3<span>
+                </a>
+                <span class="sr-only">25%</span>
+              </div>
+              <div class="progress-bar {{3 <= position ? 'progress-bar-active' : 'progress-bar-disabled'}}" style="width: 20%">
+                <a class="progress-dot" ui-sref=".services">
+                  <span class="progress-label">4</span>
+                </a>
+                <span class="sr-only">25%</span>
+              </div>
+              <div class="progress-bar {{4 <= position ? 'progress-bar-active' : 'progress-bar-disabled'}}" style="width: 20%">
+                <a class="progress-dot" ui-sref=".payment">
+                  <span class="progress-label">5</span>
+                </a>
+                <span class="sr-only">25%</span>
+              </div>
+              <div class="progress-bar {{5 <= position ? 'progress-bar-active' : 'progress-bar-disabled'}}" style="width: 20%">
+                <a class="progress-dot" ui-sref=".contact">
+                  <span class="progress-label">6</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- </div> -->
+
+          <form ng-submit="sendMail(mainForm.$valid)" name="mainForm" novalidate>
+              <div id="form-views" ui-view></div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>

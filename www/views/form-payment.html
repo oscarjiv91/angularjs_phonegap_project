@@ -1,0 +1,64 @@
+<div class="text-center well">
+  Elija el método de pago que utilizará e indique
+  si requerirá factura
+</div>
+
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-xs-7 control-label"><img src="./img/mastercard.png" class="payment-icon"></img> <img src="./img/visa.png" class="payment-icon"></img> <p> 3 Meses sin intereses</p></label>
+    <div class="col-xs-2 col-xs-offset-2" >
+      <input type="radio" ng-model="formData.f_payment_type" value="visa_or_master_card_3_months" id="visa_or_master_card_3_months" required>
+      <label for="visa_or_master_card_3_months"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-7 control-label"><img src="./img/mastercard.png" class="payment-icon"></img> <img src="./img/visa.png" class="payment-icon"></img> <p>6 Meses sin intereses (Servicio todo incluído)</p></label>
+    <div class="col-xs-2 col-xs-offset-2" >
+      <input type="radio" ng-model="formData.f_payment_type" value="visa_or_master_card_6_months" id="visa_or_master_card_6_months" required>
+      <label for="visa_or_master_card_6_months"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-7 control-label"><img src="./img/amex.png" class="payment-icon"><p>3 Meses sin intereses (Aplican restricciones)</p></label>
+    <div class="col-xs-2 col-xs-offset-2" >
+      <input type="radio" ng-model="formData.f_payment_type" value="amex" id="amex" required>
+      <label for="amex"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Transferencia bancaria/Contado</label>
+    <div class="col-xs-2 col-xs-offset-4" >
+      <input type="radio" ng-model="formData.f_payment_type" value="cash_or_transfer" id="cash_or_transfer" required>
+      <label for="cash_or_transfer"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="well" id="well-bill">
+    <div class="form-group">
+      <label  class="col-xs-7 control-label">Requiere factura</label>
+      <div class=" col-xs-offset-2 col-xs-2" style="padding-top:0px">
+        <input type="checkbox" ng-model="formData.f_payment_need_receipt" name="f_payment_need_receipt" id="f_payment_need_receipt" value="true">
+        <label for="f_payment_need_receipt"><span></span></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-xs-12">
+        <a ui-sref="form.contact" class="btn btn-default btn-next">
+          Siguiente
+        </a>
+    </div>
+  </div>
+</div>

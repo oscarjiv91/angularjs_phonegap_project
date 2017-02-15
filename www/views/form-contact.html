@@ -1,0 +1,64 @@
+<div class="text-center well">
+  Por favor, rellene los siguiente datos para
+  ponernos en contacto con usted
+</div>
+
+
+<div class="form-horizontal">
+  <div class="form-group">
+      <label for="f_contact_name" class="col-sm-4 control-label">Nombre y apellido *</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" name="f_contact_name" ng-model="formData.f_contact_name" required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_contact_email" class="col-sm-4 control-label">Email *</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" name="f_contact_email" ng-model="formData.f_contact_email" required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_contact_phone" class="col-sm-4 control-label">Teléfono *</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" name="f_contact_phone" ng-model="formData.f_contact_phone" required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_contact_cellphone" class="col-sm-4 control-label">Celular *</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" name="f_contact_cellphone" ng-model="formData.f_contact_cellphone" required>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="f_contact_type" class="col-sm-4 control-label">Recibir respuesta por *:</label>
+      <div class=" col-sm-8">
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_contact_type" value="email" name="f_contact_type" id="email" required>
+          <label for="email"><span></span></label> Email
+        </div>
+        <div class="radio">
+          <input type="radio" ng-model="formData.f_contact_type" value="call" name="f_contact_type" id="call" required>
+          <label for="call"><span></span></label> Llamada
+        </div>
+      </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-xs-12">
+      <button type="submit" class="btn btn-default btn-next">
+        Enviar
+      </button>
+  </div>
+</div>

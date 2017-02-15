@@ -1,0 +1,125 @@
+<div class="text-center well">
+  Por favor, marque los servicios que requiere
+   para la mudanza
+</div>
+
+<div class="form-horizontal">
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Servicio todo incluído (usted no realiza ninguna tarea de mudanza)</label>
+    <div class="col-xs-2 col-xs-offset-4" >
+      <input type="radio" ng-model="formData.f_service_type" value="all_inclusive" id="all_inclusive" required>
+      <label for="all_inclusive"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Servicio básico (Usted empaca cajas y nosotros los muebles)</label>
+    <div class="col-xs-2 col-xs-offset-4" >
+      <input type="radio" ng-model="formData.f_service_type" value="basic" id="basic" required>
+      <label for="basic"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Servicio intermedio (usted empaca solo algunas cajas y el resto nosotros)</label>
+    <div class="col-xs-2 col-xs-offset-4" >
+      <input type="radio" ng-model="formData.f_service_type" value="intermediate" id="intermediate" required>
+      <label for="intermediate"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Volar muebles</label>
+    <div class=" col-xs-offset-4 col-xs-2">
+      <input type="checkbox" ng-model="formData.f_services_furniture_package" name="f_services_furniture_package" value="true" id="f_services_furniture_package">
+      <label for="f_services_furniture_package"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Servicio de almacenaje</label>
+    <div class=" col-xs-offset-4 col-xs-2">
+      <input type="checkbox" ng-model="formData.f_services_storage" name="f_services_storage" value="true" id ="f_services_storage">
+      <label for="f_services_storage"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Instalación de pantallas</label>
+    <div class=" col-xs-offset-4 col-xs-2">
+      <input type="checkbox" ng-model="formData.f_services_screen_install" name="f_services_screen_install" value="true" id="f_services_screen_install">
+      <label for="f_services_screen_install"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Instalación de cuadros</label>
+    <div class=" col-xs-offset-4 col-xs-2">
+      <input type="checkbox" ng-model="formData.f_services_frame_install" name="f_services_frame_install" value="true" id="f_services_frame_install">
+      <label for="f_services_frame_install"><span></span></label>
+    </div>
+  </div>
+
+  <div class="line-separator"></div>
+
+  <div class="form-group">
+    <label class="col-xs-5 control-label">Traslado de automóvil o motocicleta</label>
+    <div class=" col-xs-offset-4 col-xs-2">
+      <input type="checkbox" ng-model="formData.f_services_car" name="f_services_car" value="true" id="f_services_car">
+      <label for="f_services_car"><span></span></label>
+    </div>
+  </div>
+
+  <div class="" ng-show="formData.f_services_car">
+    <div class="line-separator"></div>
+
+      <div class="form-group">
+          <label for="f_services_car_model" class="col-xs-12 control-label">Marca y modelo</label>
+          <div class="col-xs-12">
+            <input type="text" class="form-control" ng-model="formData.f_services_car_model" name="f_services_car_model">
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-5 control-label">Tiene seguro?</label>
+        <div class=" col-xs-offset-4 col-xs-2">
+          <input type="checkbox" ng-model="formData.f_services_car_insurance" name="f_services_car_insurance" value="true" id="f_services_car_insurance">
+          <label for="f_services_car_insurance"><span></span></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-5 control-label">Funciona?</label>
+        <div class="col-xs-offset-4 col-xs-2">
+          <input type="checkbox" ng-model="formData.f_services_car_working" name="f_services_car_working" value="true" id="f_services_car_working">
+          <label for="f_services_car_working"><span></span></label>
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="f_services_car_obs" class="col-xs-12 control-label">Observaciones</label>
+          <div class="col-xs-12">
+            <input type="text_area" class="form-control"  name="f_services_car_obs" ng-model="formData.f_services_car_obs">
+          </div>
+      </div>
+
+  </div>
+
+  <div class="form-group row">
+    <div class="col-xs-12">
+        <a ui-sref="form.payment" class="btn btn-default btn-next">
+          Siguiente
+        </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.movinghome.ios"
+        }
+    },
+    "dependent_plugins": {}
+}
